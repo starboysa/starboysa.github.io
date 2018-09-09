@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Jacob McPeak]]></title>
-  <link href="http://jacobmcpeak.com/atom.xml" rel="self"/>
-  <link href="http://jacobmcpeak.com/"/>
-  <updated>2018-09-08T21:42:04-07:00</updated>
-  <id>http://jacobmcpeak.com/</id>
+  <link href="http://starboysa.github.io/atom.xml" rel="self"/>
+  <link href="http://starboysa.github.io/"/>
+  <updated>2018-09-08T22:03:03-07:00</updated>
+  <id>http://starboysa.github.io/</id>
   <author>
     <name><![CDATA[Jacob McPeak]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[The Short and Long of C++ Type Introspection]]></title>
-    <link href="http://jacobmcpeak.com/blog/2017/03/01/the-short-and-long-of-cpp-type-introspection/"/>
+    <link href="http://starboysa.github.io/blog/2017/03/01/the-short-and-long-of-cpp-type-introspection/"/>
     <updated>2017-03-01T12:06:20-07:00</updated>
-    <id>http://jacobmcpeak.com/blog/2017/03/01/the-short-and-long-of-cpp-type-introspection</id>
+    <id>http://starboysa.github.io/blog/2017/03/01/the-short-and-long-of-cpp-type-introspection</id>
     <content type="html"><![CDATA[<p>I first wrote this blog post a year ago, but a misplaced sense of responsibility has called me to keep it updated. The first time I wrote this article I considered it a good resource for other DigiPen students who might be implementing a similar system. I was doing my part.</p>
 
 <p>The first time I updated this post was October 19th of last year (2017) after some time working with a team that utilized an identical system to the one outlined in the article. I decided to update it because the optimism and faith I had in my first post was misplaced. I wanted to warn those who had read the previous post about the beasts I had encountered using my own guidelines. I was doing what was right.</p>

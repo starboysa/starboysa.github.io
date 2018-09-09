@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://jacobmcpeak.com/sitemap.xml 
+Sitemap: http://starboysa.github.io/sitemap.xml 
