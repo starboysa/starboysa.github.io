@@ -1,0 +1,82 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Synthalaxy  | Jacob McPeak</title>
+
+	<meta name="author" content="Jacob McPeak"> 
+	
+	<meta name="description" content="On DigiPen’s Game Gallary! DigiPen Sophmore year project. This was the first game engine I’ve written in C++ with no game specific helper libraries &hellip;"> <meta name="keywords" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Jacob McPeak" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" rel="stylesheet" type="text/css">
+	
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	
+</head>
+
+
+
+<body>
+	<header id="side-bar">
+        <div id="side-bar-content">
+            Jacob McPeak
+            <div id="side-bar-icon">
+                <img src="/images/Avatar.png">
+            </div>
+            
+            <nav id="main-nav"><ul>
+    <li><a href="/">About</a></li>
+	<li><a href="/archives">Blog</a></li>
+	<li><a href="/projects">Projects</a></li>
+    <li><a href="https://github.com/starboysa">GitHub</a></li>
+</ul>
+</nav>
+
+
+
+        </div>
+    </header>
+
+	<div id="content" class="inner"><article class="post">
+    <h2 class="title">Synthalaxy</h2>
+
+
+
+
+<div class="entry-content">
+<div style="max-width:800px;margin:0 auto; padding:5px;">
+  <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe width="800" height="600" frameborder="0" allowfullscreen="" src="http://www.youtube.com/embed/DkFYaSOS2T8" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; max-width: 800px; max-height: 600px;"></iframe>
+  </div>
+</div>
+
+<a href="https://games.digipen.edu/games/synthalaxy#.WejBTWhSxhE">On DigiPen’s Game Gallary!</a>
+<p>
+DigiPen Sophmore year project. This was the first game engine I’ve written in C++ with no game specific helper libraries (we only used really low level libraries like GLFW). Freshmen year we were limited to C, so now that we’re in the all powerful C++ what’s the first thing we did? Extend it with hacky macros of course! The messiest system in the engine is the custom C++ reflection system. It was really helpful, but impossible to debug due to the entire thing being implemented with a mix of macros, meta-template programming, and prayers. I have several articles on this website on how to do this better using clang with python to parse your C++ code. Really happy with the end product with this game. It plays good, looks good,sounds good, and runs good.
+</p>
+
+<p>
+Another thing I’d like to mention on this project is the level editing tool I wrote in Qt. My experience with Qt is half good half bad. The good part is that Qt is written in C++ so integrating it with a C++ engine is really easy! But after some exposure to other UI frameworks (specifically WPF) Qt itself is kinda clunky, especially with moc and lack of clear good practices. I always found 2-3 ways to do something with really only 1 good way and of course I decided to mix the two bad ways together to make an unintelligible mess of a code-base that only I could work on. In my most recent project (Outlier) we’re using WPF with industry standard good practices (MVVM) which has led to a much cleaner codebase even with 4 programmers working on it.
+</p>
+
+</div>
+
+
+</article>
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2018
+ Jacob McPeak 
+<br>
+Powered by Octopress.
+</footer>
+	
+
+</body>
+</html>
