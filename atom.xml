@@ -4,7 +4,7 @@
   <title><![CDATA[Jacob McPeak]]></title>
   <link href="http://starboysa.github.io/atom.xml" rel="self"/>
   <link href="http://starboysa.github.io/"/>
-  <updated>2018-09-10T13:55:23-07:00</updated>
+  <updated>2018-09-10T16:37:33-07:00</updated>
   <id>http://starboysa.github.io/</id>
   <author>
     <name><![CDATA[Jacob McPeak]]></name>
@@ -22,11 +22,11 @@
 
 <p>The first time I updated this post was October 19th of last year (2017) after some time working with a team that utilized an identical system to the one outlined in the article. I decided to update it because the optimism and faith I had in my first post was misplaced. I wanted to warn those who had read the previous post about the beasts I had encountered using my own guidelines. I was doing what was right.</p>
 
-<p>Now with almost another year under my belt and full C++ type reflection being considered for the C++ standard I feel it is necissary to come back for a complete rewrite to tell you: I was wrong.</p>
+<p>Now with almost another year under my belt and full C++ type reflection being considered for the C++ standard I feel it is necessary to come back for a complete rewrite to tell you: I was wrong.</p>
 
-<p>You see, C++ Type Introspection is a loosing battle. Until it makes its way into the standard, there will be no right way to hack it into your project. Just a list of bad ways. Poisons upon you&rsquo;re entire project and especially its build systems. If you have come here seeking the optimistic guidance that once lived here instead you find I, the merchant of death, that shall atleast inform you of toxin you shall soon swallow.</p>
+<p>You see, C++ Type Introspection is a loosing battle. Until it makes its way into the standard, there will be no right way to hack it into your project. Just a list of bad ways. Poisons upon you&rsquo;re entire project and especially its build systems. If you have come here seeking the optimistic guidance that once lived here instead you find I, the merchant of death, that shall at least inform you of toxin you shall soon swallow.</p>
 
-<p>Before I let you do your shopping we first must get some termonology straight:</p>
+<p>Before I let you do your shopping we first must get some terminology straight:</p>
 
 <ul>
 <li>Type Introspection: The ability to interact a class' members and methods at runtime</li>
@@ -34,7 +34,7 @@
 </ul>
 
 
-<p>These are technical definitions which I will use throught this article, but everyone just calls introspection reflection (even the standard). It makes sense for C++ because I don&rsquo;t see the standard getting true Type Reflection ever. It would compromise performance.  However, I&rsquo;ll be carefull because (DigiPen students take note): there are other languages than C++ and this distinction is important.</p>
+<p>These are technical definitions which I will use throughout this article, but everyone just calls introspection reflection (even the standard). It makes sense for C++ because I don&rsquo;t see the standard getting true Type Reflection ever. It would compromise performance.  However, I&rsquo;ll be careful because (DigiPen students take note): there are other languages than C++ and this distinction is important.</p>
 
 <p>So back to C++. I&rsquo;m familiar with two ways to create custom C++ type introspection both of which I&rsquo;ll outline on this blog in later posts. For this blog I&rsquo;m going to go over aspects that affect both methods; starting with what makes a good implementation:</p>
 
@@ -44,11 +44,11 @@
 <li>have minimal impact on build times</li>
 <li>have a clean interface for adding new managed types</li>
 <li>have readable intermediary code for reasonable debugging</li>
-<li>be as simple as possible while still while implementing everything that's necissary</li>
+<li>be as simple as possible while still while implementing everything that's necessary</li>
 </ul>
 
 
-<p>So what is &ldquo;necissary&rdquo;? The simplist yet still usefull Type Introspection system that is still useful can:</p>
+<p>So what is &ldquo;necessary&rdquo;? The simplest yet still useful Type Introspection system that is still useful can:</p>
 
 <ul>
 <li>be able to register both user defined types and basic/library types to be managed by the introspection system</li>
@@ -65,7 +65,7 @@
 
 <p>(Makin good use of those lists)</p>
 
-<p>So yea, that&rsquo;s a lot just for the simplist implementation. This is the minimum in order to use the introspection system in order to write generic serialization code which was my original reason for implementing introspection.</p>
+<p>So yea, that&rsquo;s a lot just for the simplest implementation. This is the minimum in order to use the introspection system in order to write generic serialization code which was my original reason for implementing introspection.</p>
 
 <p>However, some cool things you can do with an introspection system:</p>
 
@@ -75,7 +75,7 @@
 </ul>
 
 
-<p>So that isn&rsquo;t a lot really, but overall the coolist thing about having introspection is being able to write scalable code. If you use introspection to write a serialization system any class managed by the introspection can be written and read from a file which is a huge win. That doesn&rsquo;t seem that impressive when you consider C# has a standard library function for that, but C# is <a href="https://attractivechaos.github.io/plb/">slower</a> for other reasons so we&rsquo;re stuck with C++.</p>
+<p>So that isn&rsquo;t a lot really, but overall the coolest thing about having introspection is being able to write scalable code. If you use introspection to write a serialization system any class managed by the introspection can be written and read from a file which is a huge win. That doesn&rsquo;t seem that impressive when you consider C# has a standard library function for that, but C# is <a href="https://attractivechaos.github.io/plb/">slower</a> for other reasons so we&rsquo;re stuck with C++.</p>
 
 <p>From here I&rsquo;ll direct you to the two different methods of implementation:</p>
 
