@@ -1,24 +1,67 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Jacob McPeak]]></title>
-  <link href="http://starboysa.github.io/atom.xml" rel="self"/>
-  <link href="http://starboysa.github.io/"/>
-  <updated>2018-09-26T00:00:03-07:00</updated>
-  <id>http://starboysa.github.io/</id>
-  <author>
-    <name><![CDATA[Jacob McPeak]]></name>
-    
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Diablo 3 And Path of Exile Networking Breakdown  | Jacob McPeak</title>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Diablo 3 And Path of Exile Networking Breakdown]]></title>
-    <link href="http://starboysa.github.io/blog/2018/09/25/diablo3andpoenetworkingbreakdown/"/>
-    <updated>2018-09-25T19:37:17-07:00</updated>
-    <id>http://starboysa.github.io/blog/2018/09/25/diablo3andpoenetworkingbreakdown</id>
-    <content type="html"><![CDATA[<p>Blizzard is visiting DigiPen on Thursday (9/27/2018) and to welcome them here I decided I would take a look at the networking from a game from 2012 which currently has an unannounced sequel in the works, Diablo 3.
+	<meta name="author" content="Jacob McPeak"> 
+	
+	<meta name="description" content="Blizzard is visiting DigiPen on Thursday (9/27/2018) and to welcome them here I decided I would take a look at the networking from a game from 2012 &hellip;"> <meta name="keywords" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Jacob McPeak" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" rel="stylesheet" type="text/css">
+	
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	
+</head>
+
+
+
+<body>
+	<header id="side-bar">
+        <div id="side-bar-content">
+            Jacob McPeak
+            <div id="side-bar-icon">
+                <img src="/images/Avatar.png">
+            </div>
+            
+            <nav id="main-nav"><ul>
+  <li><a href="/">About</a></li>
+	<li><a href="/archives">Blog</a></li>
+  <li><hr style="margin: 10px 0 10px 0"></li>
+	<li><a href="/outlier">Outlier</a></li>
+  <li><a href="/synthalaxy">Synthalaxy</a></li>
+  <li><a href="/crash-course">Crash Course</a></li>
+  <li><a href="https://github.com/starboysa/CAN">CAN</a></li>
+  <li><hr style="margin: 10px 0 10px 0"></li>
+  <li><a href="https://github.com/starboysa">GitHub</a></li>
+  <li><a href="https://www.linkedin.com/in/jacob-mcpeak/">LinkedIn</a></li>
+  <li><a href="/Base.pdf">Long Resume</a></li>
+</ul>
+</nav>
+
+
+
+
+            <footer id="footer" class="inner">Copyright &copy; 2018
+ Jacob McPeak 
+<br>
+Powered by Octopress.
+</footer>
+            
+
+        </div>
+
+    </header>
+
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Diablo 3 and Path of Exile Networking Breakdown</h2>
+	<div class="entry-content"><p>Blizzard is visiting DigiPen on Thursday (9/27/2018) and to welcome them here I decided I would take a look at the networking from a game from 2012 which currently has an unannounced sequel in the works, Diablo 3.
 I will be pitting Diablo 3 against its main rival in the ARG marketplace, Path of Exile. Which one will come out on top?</p>
 
 <h3>Latency</h3>
@@ -184,81 +227,29 @@ Kind of glad I reached that conclusion too; it would have been awkward to welcom
 
 <p>Both game&rsquo;s actual state replication layers seem to work fine for the kind of games they are, but if they start to dabble with more time sensitive gameplay mechanics or some form of serious PvP combat they should consider moving off of TCP and increasing server update rates.
 Also, PoE should get its networking topology together, but it never will because it&rsquo;s already shipped so I&rsquo;m just going to have to live with this knowledge for the rest of my life.</p>
-]]></content>
-  </entry>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
   
-  <entry>
-    <title type="html"><![CDATA[The Short and Long of C++ Type Introspection]]></title>
-    <link href="http://starboysa.github.io/blog/2017/03/01/the-short-and-long-of-cpp-type-introspection/"/>
-    <updated>2017-03-01T12:06:20-07:00</updated>
-    <id>http://starboysa.github.io/blog/2017/03/01/the-short-and-long-of-cpp-type-introspection</id>
-    <content type="html"><![CDATA[<p>I first wrote this blog post a year ago, but a misplaced sense of responsibility has called me to keep it updated. The first time I wrote this article I considered it a good resource for other DigiPen students who might be implementing a similar system. I was doing my part.</p>
-
-<p>The first time I updated this post was October 19th of last year (2017) after some time working with a team that utilized an identical system to the one outlined in the article. I decided to update it because the optimism and faith I had in my first post was misplaced. I wanted to warn those who had read the previous post about the beasts I had encountered using my own guidelines. I was doing what was right.</p>
-
-<p>Now with almost another year under my belt and full C++ type reflection being considered for the C++ standard I feel it is necessary to come back for a complete rewrite to tell you: I was wrong.</p>
-
-<p>You see, C++ Type Introspection is a loosing battle. Until it makes its way into the standard, there will be no right way to hack it into your project. Just a list of bad ways. Poisons upon you&rsquo;re entire project and especially its build systems. If you have come here seeking the optimistic guidance that once lived here instead you find I, the merchant of death, that shall at least inform you of toxin you shall soon swallow.</p>
-
-<p>Before I let you do your shopping we first must get some terminology straight:</p>
-
-<ul>
-<li>Type Introspection: The ability to interact a class' members and methods at runtime</li>
-<li>Type Reflection: Type Introspection + the ability to add/remove members and methods at runtime</li>
-</ul>
 
 
-<p>These are technical definitions which I will use throughout this article, but everyone just calls introspection reflection (even the standard). It makes sense for C++ because I don&rsquo;t see the standard getting true Type Reflection ever. It would compromise performance.  However, I&rsquo;ll be careful because (DigiPen students take note): there are other languages than C++ and this distinction is important.</p>
 
-<p>So back to C++. I&rsquo;m familiar with two ways to create custom C++ type introspection both of which I&rsquo;ll outline on this blog in later posts. For this blog I&rsquo;m going to go over aspects that affect both methods; starting with what makes a good implementation:</p>
-
-<p>A good implementation will:</p>
-
-<ul>
-<li>have minimal impact on build times</li>
-<li>have a clean interface for adding new managed types</li>
-<li>have readable intermediary code for reasonable debugging</li>
-<li>be as simple as possible while still while implementing everything that's necessary</li>
-</ul>
+<time datetime="2018-09-25T19:37:17-07:00" pubdate data-updated="true">Sep 25th, 2018</time></div>
+	
 
 
-<p>So what is &ldquo;necessary&rdquo;? The simplest yet still useful Type Introspection system that is still useful can:</p>
-
-<ul>
-<li>be able to register both user defined types and basic/library types to be managed by the introspection system</li>
-<li>represent a compiled C++ class at runtime with an object</li>
-<li>get a list of class members</li>
-<li>be able to retrieve the values of those members</li>
-<li>be able to set the values of those members</li>
-<li>get a list of class methods</li>
-<li>be able to call those methods provided with a instance of the class</li>
-<li>get the size of the class</li>
-<li>construct the class into a byte buffer</li>
-</ul>
-
-
-<p>(Makin good use of those lists)</p>
-
-<p>So yea, that&rsquo;s a lot just for the simplest implementation. This is the minimum in order to use the introspection system in order to write generic serialization code which was my original reason for implementing introspection.</p>
-
-<p>However, some cool things you can do with an introspection system:</p>
-
-<ul>
-<li>automatically build editor UI for managed types</li>
-<li>automatically reveal managed types to a scripting language</li>
-</ul>
-
-
-<p>So that isn&rsquo;t a lot really, but overall the coolest thing about having introspection is being able to write scalable code. If you use introspection to write a serialization system any class managed by the introspection can be written and read from a file which is a huge win. That doesn&rsquo;t seem that impressive when you consider C# has a standard library function for that, but C# is <a href="https://attractivechaos.github.io/plb/">slower</a> for other reasons so we&rsquo;re stuck with C++.</p>
-
-<p>From here I&rsquo;ll direct you to the two different methods of implementation:</p>
-
-<ul>
-<li>Hiding breadcrumbs in managed classes and parsing them in clang's AST</li>
-<li>Macro and template wizardry</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-</feed>
+</div>
+</article>
+</div>
+</body>
+</html>
