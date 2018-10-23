@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://starboysa.github.io/blog/2018/10/23/networked-physics-in-unity/</loc>
+<lastmod>2018-10-23T11:28:58-07:00</lastmod>
+</url>
+<url>
 <loc>http://starboysa.github.io/blog/2018/09/25/diablo3andpoenetworkingbreakdown/</loc>
 <lastmod>2018-09-25T19:37:17-07:00</lastmod>
 </url>
