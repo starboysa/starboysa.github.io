@@ -4,7 +4,7 @@
   <title><![CDATA[Jacob McPeak]]></title>
   <link href="http://starboysa.github.io/atom.xml" rel="self"/>
   <link href="http://starboysa.github.io/"/>
-  <updated>2018-12-12T16:37:37-08:00</updated>
+  <updated>2018-12-12T16:47:18-08:00</updated>
   <id>http://starboysa.github.io/</id>
   <author>
     <name><![CDATA[Jacob McPeak]]></name>
@@ -47,7 +47,7 @@ This means it&rsquo;s not receiving a steady stream of data which I would assume
 <p>However, the bloat around TCP (specifically it&rsquo;s sawtooth congestion control) is painful and since this protocol is built on UDP it could be faster on a high congestion network.</p>
 
 <p>The real thing I need to do is just run some tests.
-So I&rsquo;ve done so:</p>
+So I&rsquo;ve done so: (These are 50% done, will update as soon as possible)</p>
 ]]></content>
   </entry>
   
