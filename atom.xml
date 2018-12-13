@@ -4,7 +4,7 @@
   <title><![CDATA[Jacob McPeak]]></title>
   <link href="http://starboysa.github.io/atom.xml" rel="self"/>
   <link href="http://starboysa.github.io/"/>
-  <updated>2018-10-23T12:14:42-07:00</updated>
+  <updated>2018-12-12T16:37:37-08:00</updated>
   <id>http://starboysa.github.io/</id>
   <author>
     <name><![CDATA[Jacob McPeak]]></name>
@@ -12,6 +12,44 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Downloading Made Easy]]></title>
+    <link href="http://starboysa.github.io/blog/2018/12/10/downloading-made-easy/"/>
+    <updated>2018-12-10T11:36:56-08:00</updated>
+    <id>http://starboysa.github.io/blog/2018/12/10/downloading-made-easy</id>
+    <content type="html"><![CDATA[<p>I found myself in an environment where I couldn&rsquo;t easily set up a TCP connection between clients that I wanted to send an image between them.
+I didn&rsquo;t want to just re-implement TCP because I wouldn&rsquo;t have any other use for the reliability;
+The only thing I have to do and the only thing I want to do is send these images.
+So I came up with my own involuntary image transfer protocol.</p>
+
+<h3>How It Works</h3>
+
+
+<p>It&rsquo;s really simple. The first thing the host does is fragment the file (a compressed version) into as many packets as it needs to.
+The host sends a packet to the client that contains a unique ID for the image and how many fragments the file has.
+Every RTT (you can measure it or just guess ~100ms) the client sends a packet filled with fragment IDs that it hasn&rsquo;t gotten yet (which would be all of them at first).
+The host sends all fragments that have been requested to the client.</p>
+
+<p>This protocol elegantly takes care of packet loss, out of order packets, high latency, and if you measure RTT it also has a form of congestion control.
+With a small extension to the protocol you could have multiple servers send fragments to the client which could service a Torrent like peer-to-peer network.</p>
+
+<p>The best part is that this protocol is trivial to implement on top of UDP and that&rsquo;s the main goal.</p>
+
+<h3>Is It Fast?</h3>
+
+
+<p>Kind of?</p>
+
+<p>I want to say it&rsquo;s slow because the way the client requests missing packets means that it&rsquo;s receiving data in waves of fragments.
+This means it&rsquo;s not receiving a steady stream of data which I would assume would be faster.</p>
+
+<p>However, the bloat around TCP (specifically it&rsquo;s sawtooth congestion control) is painful and since this protocol is built on UDP it could be faster on a high congestion network.</p>
+
+<p>The real thing I need to do is just run some tests.
+So I&rsquo;ve done so:</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Networked Physics in Unity]]></title>

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://starboysa.github.io/blog/2018/12/10/downloading-made-easy/</loc>
+<lastmod>2018-12-10T11:36:56-08:00</lastmod>
+</url>
+<url>
 <loc>http://starboysa.github.io/blog/2018/10/23/networked-physics-in-unity/</loc>
 <lastmod>2018-10-23T11:28:58-07:00</lastmod>
 </url>
@@ -13,9 +17,6 @@
 <lastmod>2017-03-01T12:06:20-07:00</lastmod>
 </url>
 <url>
-<loc>http://starboysa.github.io/blog/</loc>
-</url>
-<url>
 <loc>http://starboysa.github.io/blog/archives/</loc>
 </url>
 <url>
@@ -23,6 +24,9 @@
 </url>
 <url>
 <loc>http://starboysa.github.io/archives/</loc>
+</url>
+<url>
+<loc>http://starboysa.github.io/blog/</loc>
 </url>
 <url>
 <loc>http://starboysa.github.io/can/</loc>
@@ -43,7 +47,10 @@
 <loc>http://starboysa.github.io/synthalaxy/</loc>
 </url>
 <url>
+<loc>http://starboysa.github.io/the-pilgrim/</loc>
+</url>
+<url>
 <loc>http://starboysa.github.io/Base.pdf</loc>
-<lastmod>2018-10-02T11:00:39-07:00</lastmod>
+<lastmod>2018-12-12T15:01:48-08:00</lastmod>
 </url>
 </urlset>
