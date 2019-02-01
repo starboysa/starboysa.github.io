@@ -50,7 +50,7 @@
 
 
 
-            <footer id="footer" class="inner">Copyright &copy; 2018
+            <footer id="footer" class="inner">Copyright &copy; 2019
  Jacob McPeak 
 <br>
 Powered by Octopress.
@@ -79,9 +79,36 @@ Powered by Octopress.
 DigiPen Sophmore year project. This was the first game engine I’ve written in C++ with no game specific helper libraries (we only used really low level libraries like GLFW). Freshmen year we were limited to C, so now that we’re in the all powerful C++ what’s the first thing we did? Extend it with hacky macros of course! The messiest system in the engine is the custom C++ reflection system. It was really helpful, but impossible to debug due to the entire thing being implemented with a mix of macros, meta-template programming, and prayers. I have several articles on this website on how to do this better using clang with python to parse your C++ code. Really happy with the end product with this game. It plays good, looks good,sounds good, and runs good.
 </p>
 
+<h2>Editor</h2>
 <p>
-Another thing I’d like to mention on this project is the level editing tool I wrote in Qt. My experience with Qt is half good half bad. The good part is that Qt is written in C++ so integrating it with a C++ engine is really easy! But after some exposure to other UI frameworks (specifically WPF) Qt itself is kinda clunky, especially with moc and lack of clear good practices. I always found 2-3 ways to do something with really only 1 good way and of course I decided to mix the two bad ways together to make an unintelligible mess of a code-base that only I could work on. In my most recent project (Outlier) we’re using WPF with industry standard good practices (MVVM) which has led to a much cleaner codebase even with 4 programmers working on it.
+I wrote the level editor for this project in Qt.
 </p>
+<img src="/synthalaxy/Editor1.PNG" />
+<div style="display: grid; grid-template-columns: auto auto;">
+<p>
+This tool was used actively by two designers to create all levels in the game.
+The most interesting part of this editor is the Property Editor.
+The engine is component based and the property editor lets you modify the serialized values of the components.
+The UI for the components is automatically generated using reflection information from the engine.
+</p>
+<img src="/synthalaxy/Editor5.PNG" style="height=50%"/>
+<p>
+This auto-generated UI can be replaced with custom UI where appropriate (specifically for the hit point component).
+<br>
+Here we can see that the currently selected enemy has their left side covered in hit points / shields.
+The actual data being stored is a bitfield where each index is true/false whether or not the enemy has that
+shield / hit point. With the overriding feature I was able to provide a nice UI for designers to use.
+</p>
+<img src="/synthalaxy/Editor3.PNG" style="height=50%"/>
+<p>
+The other nifty feature was the per-component archetype overrides. In Unity when you modify any property of any component
+the entire reference to the prefab halts and waits for you to revert it. We found that we wanted to make slight changes
+to components while keeping the properties of the rest of the components up to date with the latest archetype. So, that's
+exactly what I did. The greyed out components are components get their values directly from an archetype while the solid
+black components have had their properties overriden. This is useful for transforms, sprite color, enemy hit point locations, and AI tweak-ables.
+</p>
+<img src="/synthalaxy/Editor6.PNG"/>
+</div>
 
 </div>
 
